@@ -1,15 +1,22 @@
 require_relative '../bi_graph'
 
 RSpec.describe BiGraph do
-
   describe "On initialize" do
-    it "vertices should be empty" do
-      expect(subject.vertices).to be_empty
+
+    describe "#vertex_count" do
+      context "with no arguments passed" do
+        specify { expect(subject.vertex_count).to be 0 }
+      end
+
+      context "with vertices passed in" do
+        subject { BiGraph.new([1, 2, 3, 4, 5]) }
+        specify { expect(subject.vertex_count).to be 5 }
+      end
     end
 
-    it "edges should be empty" do
-      expect(subject.edges).to be_empty
+    describe "#edge_count" do
+      specify { expect(subject.edge_count).to be 0 }
     end
+
   end
-
 end
