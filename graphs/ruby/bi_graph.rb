@@ -16,5 +16,6 @@ class BiGraph
     @edge_count += 1
     @adjacencies[from].push(to)
     @adjacencies[to].push(from)
+    nil
   end
 end

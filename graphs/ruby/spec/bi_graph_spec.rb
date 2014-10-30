@@ -33,5 +33,9 @@ RSpec.describe BiGraph do
     it "adds and adjacent vertex to the 'to' vertex" do
       expect{subject.add_edge(0, 1)}.to change{subject.adj(1)}.from([]).to([0])
     end
+
+    it "returns nil" do
+      expect(subject.add_edge(0, 1)).to be_nil
+    end
   end
 end
