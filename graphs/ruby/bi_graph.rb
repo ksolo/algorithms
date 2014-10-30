@@ -1,16 +1,10 @@
 class BiGraph
 
-  def initialize(vertices = [])
-    @vertices = vertices
-    @edges = []
-  end
+  attr_reader :vertices_count, :edge_count
 
-  def vertex_count
-    @vertices.length
-  end
-
-  def edge_count
-    @edges.length
+  def initialize(vertices_count: 0)
+    @vertices_count = vertices_count
+    @edge_count = 0
   end
 
 end
